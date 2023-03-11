@@ -1,4 +1,4 @@
-# Django portfolio App
+# Django Portfolio App
 
 ![django-nginx (1)](https://user-images.githubusercontent.com/69528812/224481008-f584b846-ac04-4d60-8f33-e8c2ca7397d4.jpg)
 
