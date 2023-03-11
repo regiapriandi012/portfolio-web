@@ -1,5 +1,5 @@
-# menggunakan image python versi 3.9 sebagai base image
-FROM python:3.9-slim-buster
+# menggunakan image python versi 3.8 sebagai base image
+FROM python:3.8.2
 
 # set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -7,13 +7,6 @@ ENV PYTHONUNBUFFERED 1
 
 # buat direktori app dan set sebagai working directory
 WORKDIR /app
-
-# install dependensi
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
-        gcc \
-        libpq-dev \
-    && rm -rf /var/lib/apt/lists/*
 
 # copy file requirements.txt ke dalam container
 COPY requirements.txt .
