@@ -1,7 +1,6 @@
 # Django App
 ## Configure with nginx and gunicorn
 
-# 
 
 ### Configure static root in django
 
@@ -68,3 +67,37 @@ $ curl --unix-socket /run/gunicorn.sock localhost
 
 ## Configure nginx
 
+### Create a new server block file
+
+```
+$ sudo nano /etc/nginx/sites-available/webforto
+```
+
+```
+server {
+    listen 80;
+    server_name 172.18.37.21;
+
+    location = /favicon.ico { access_log off; log_not_found off; }
+    location /static/ {
+        root /home/regiapriandi/PythonProjects/Bismillahirrahmanirrahim/BismillahProject/web-porto/webforto;
+    }
+
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:/run/gunicorn.sock;
+    }
+}
+```
+
+### Enable the server block
+
+```
+$ sudo ln -s /etc/nginx/sites-available/webforto /etc/nginx/sites-enabled
+```
+
+### Test the Nginx configuration
+
+```
+$ sudo nginx -t
+```
