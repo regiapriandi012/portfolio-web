@@ -83,6 +83,10 @@ server {
         root /home/regiapriandi/PythonProjects/Bismillahirrahmanirrahim/BismillahProject/web-porto/webforto;
     }
 
+    location /media/ {
+        root /home/regiapriandi/PythonProjects/Bismillahirrahmanirrahim/BismillahProject/web-porto/webforto;
+    }
+
     location / {
         include proxy_params;
         proxy_pass http://unix:/run/gunicorn.sock;
