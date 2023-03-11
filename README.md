@@ -4,15 +4,14 @@
 
 #
 
-# Deployments
-> [Deploy Local](#deploy-local)
-> ## Deploy Docker (Docker Compose)
-> ## Deploy Kubernetes
+## Deployments
+> #### [Deploy Local Machine](#deploy-local-machine-1)
+> #### [Deploy Docker (Docker Compose)]
+> #### [Deploy Kubernetes]
 
+#
 
-# Deploy Local
-## Configure with nginx and gunicorn
-
+# Deploy Local Machine
 ### Configure static root in django
 
 ```
@@ -115,3 +114,30 @@ sudo ln -s /etc/nginx/sites-available/webforto /etc/nginx/sites-enabled
 ```
 sudo nginx -t
 ```
+
+#
+
+# Deploy Docker (Docker Compose)
+
+### Configure docker compose
+
+![container docker compose](https://user-images.githubusercontent.com/69528812/224495726-e9421919-fdf0-4ab2-b887-746d26a4bcc8.jpg)
+
+### Apply Configuration
+
+```
+$ docker-compose up --build -d
+[+] Running 3/0
+ ⠿ Container webforto-db-1     Running                                                                                                0.0s
+ ⠿ Container webforto-web-1    Running                                                                                                0.0s
+ ⠿ Container webforto-nginx-1  Running                                                                                                0.0s
+```
+
+### Check Deployment
+![image](https://user-images.githubusercontent.com/69528812/224495967-1dba4920-ad0b-467f-8474-ba90c29989b8.png)
+
+#
+
+# Deploy Kubernetes
+
+## (Soon)
