@@ -6,7 +6,7 @@
 
 ## Deployments
 > #### [Deploy Local Machine](#deploy-local-machine-1)
-> #### [Deploy Docker (Docker Compose)](#deploy-docker-docker-compose-1_
+> #### [Deploy Docker (Docker Compose)](#deploy-docker-docker-compose-1)
 > #### [Deploy Kubernetes](#deploy-kubernetes-1)
 
 #
