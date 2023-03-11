@@ -6,11 +6,10 @@
 
 ## Configure with nginx and gunicorn
 
-
 ### Configure static root in django
 
 ```
-$ sudo nano webforto/settings.py
+sudo nano webforto/settings.py
 ```
 
 ```
@@ -21,20 +20,19 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 ### Collect static files
 
 ```
-$ python manage.py collectstatic
+python manage.py collectstatic
 ```
 
 ### Testing gunicorn
 
 ```
-$ gunicorn --bind 0.0.0.0:8000 webforto.wsgi
+gunicorn --bind 0.0.0.0:8000 webforto.wsgi
 ```
-
 
 ### Creating systemd Socket and Service Files for Gunicorn
 
 ```
-$ sudo nano /etc/systemd/system/gunicorn.socket
+sudo nano /etc/systemd/system/gunicorn.socket
 ```
 
 ```
@@ -60,14 +58,14 @@ WantedBy=multi-user.target
 ### Apply the systemd unit file and gunicorn socket
 
 ```
-$ sudo systemctl start gunicorn.socket
-$ sudo systemctl enable gunicorn.socket
+sudo systemctl start gunicorn.socket
+sudo systemctl enable gunicorn.socket
 ```
 
 ### Check the succesfully config of the gunicorn.socket
 
 ```
-$ curl --unix-socket /run/gunicorn.sock localhost
+curl --unix-socket /run/gunicorn.sock localhost
 ```
 
 ## Configure nginx
@@ -75,7 +73,7 @@ $ curl --unix-socket /run/gunicorn.sock localhost
 ### Create a new server block file
 
 ```
-$ sudo nano /etc/nginx/sites-available/webforto
+sudo nano /etc/nginx/sites-available/webforto
 ```
 
 ```
@@ -102,11 +100,11 @@ server {
 ### Enable the server block
 
 ```
-$ sudo ln -s /etc/nginx/sites-available/webforto /etc/nginx/sites-enabled
+sudo ln -s /etc/nginx/sites-available/webforto /etc/nginx/sites-enabled
 ```
 
 ### Test the Nginx configuration
 
 ```
-$ sudo nginx -t
+sudo nginx -t
 ```
