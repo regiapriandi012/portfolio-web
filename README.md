@@ -4,6 +4,13 @@
 
 #
 
+# Deployments
+> [Deploy Local](#deploy-local)
+> ## Deploy Docker (Docker Compose)
+> ## Deploy Kubernetes
+
+
+# Deploy Local
 ## Configure with nginx and gunicorn
 
 ### Configure static root in django
