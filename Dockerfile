@@ -18,6 +18,9 @@ RUN apt-get update \
 # copy file requirements.txt ke dalam container
 COPY requirements.txt .
 
+# update pip
+RUN pip install --upgrade pip
+
 # install dependensi yang diperlukan
 RUN pip install -r requirements.txt
 
