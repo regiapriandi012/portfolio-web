@@ -2,8 +2,8 @@ from django.db import models
 
 # Create your models here.
 class Github(models.Model):
-    repo_name = models.CharField(max_length=100)
-    programming_language = models.CharField(max_length=100)
+    repo_name = models.CharField(max_length=200)
+    topics = models.CharField(max_length=100)
     description = models.CharField(max_length=1000)
     image = models.ImageField(upload_to='images/')
     user_image = models.ImageField(upload_to='images/')
@@ -19,7 +19,8 @@ class Github(models.Model):
 
 
 class Article(models.Model):
-    title = models.CharField(max_length=100)
+    title = models.CharField(max_length=200)
+    topics = models.CharField(max_length=100)
     description = models.CharField(max_length=1000)
     user_image = models.ImageField(upload_to='images/')
     name = models.CharField(max_length=100)
