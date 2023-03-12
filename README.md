@@ -12,6 +12,15 @@
 #
 
 # Deploy Local Machine
+
+### Configure virtualenv
+
+```
+$ python3 -m venv webfortoenv
+$ source webfortoenv/bin/activate
+$ pip install -r requirements.txt
+```
+
 ### Configure static root in django
 
 ```
