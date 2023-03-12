@@ -1,6 +1,6 @@
 # Django Portfolio App
 
-![django-nginx (2)](https://user-images.githubusercontent.com/69528812/224481785-a624287d-463b-4b64-8efb-01b06a988ab8.jpg)
+![django-nginx (3)](https://user-images.githubusercontent.com/69528812/224524889-8b40a446-487c-4e78-ba01-1e8cf2aa5b66.jpg)
 
 #
 
