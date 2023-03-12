@@ -23,15 +23,15 @@
         <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
             {% for github in githubs %}
             <div class="col">
-                <div class="card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="{{ github.image.url }}">
+                <div class="card"><a href="{{ github.repo_url }}" target="_blank"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="{{ github.image.url }}"></a>
                     <div class="card-body p-4">
-                        <span class="badge rounded-pill bg-primary mb-2">{{ github.progamming_language }}</span>
-                        <h4 class="card-title">{{ github.repo_name }}</h4>
+                        <span class="badge rounded-pill bg-primary mb-2">{{ github.programming_language }}</span>
+                        <h4 class="card-title"><a href="{{ github.repo_url }}" target="_blank" style="text-decoration: none; color: black;">{{ github.repo_name }}</a></h4>
                         <p class="card-text">{{ github.description }}</p>
-                        <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="{{ github.user_image.url }}">
+                        <div class="d-flex"><a href="{{ github.user_url }}" target="_blank" style="text-decoration: none; color: black;"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="{{ github.user_image.url }}"></a>
                             <div>
-                                <p class="fw-bold mb-0">{{ github.name }}</p>
-                                <p class="text-muted mb-0">{{ github.username }}</p>
+                                <p class="fw-bold mb-0"><a href="{{ github.user_url }}" target="_blank" style="text-decoration: none; color: black;">{{ github.name }}</a></p>
+                                <p class="text-muted mb-0"><a href="{{ github.user_url }}" target="_blank" style="text-decoration: none; color: black;">{{ github.username }}</a></p>
                             </div>
                         </div>
                     </div>
@@ -46,12 +46,12 @@
                     <div class="row g-0">
                         <div class="col-md-6">
                             <div class="text-white p-4 p-md-5">
-                                <h2 class="fw-bold text-white mb-3">Biben dum fringi dictum, augue purus</h2>
-                                <p class="mb-4">Tincidunt laoreet leo, adipiscing taciti tempor. Primis senectus sapien, risus donec ad fusce augue interdum.</p>
-                                <div class="my-3"><a class="btn btn-primary btn-lg me-2" role="button" href="#">Button</a><a class="btn btn-light btn-lg" role="button" href="#">Button</a></div>
+                                <h2 class="fw-bold text-white mb-3">Sponsor our Project</h2>
+                                <p class="mb-4">Support and sponsor our open-source python project.</p>
+                                <div class="my-3"><a class="btn btn-light btn-lg" role="button" href="https://github.com/sponsors/regiapriandi012/" target="_blank">Github Sponsor</a>&nbsp;&nbsp;<a class="btn btn-primary btn-lg me-2" role="button" href="https://paypal.me/regiapriandi012" target="_blank">Support Paypal</a></div>
                             </div>
                         </div>
-                        <div class="col-md-6 order-first order-md-last" style="min-height: 250px;"><img class="w-100 h-100 fit-cover" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"></div>
+                        <div class="col-md-6 order-first order-md-last" style="min-height: 250px; padding: 10px;"><img style="height: 100%; width: 100%" src="https://github-readme-stats.vercel.app/api?username=regiapriandi012&show_icons=true&theme=dark"></div>
                     </div>
                 </div>
             </div>
@@ -105,26 +105,8 @@
         <section class="py-4 py-xl-5">
             <div class="container">
                 <div class="text-center p-4 p-lg-5">
-                    <p class="fw-bold text-primary mb-2">Proud to introduce</p>
-                    <h1 class="fw-bold mb-4">Biben dum fringi dictum,<br>augue purus</h1><button class="btn btn-primary fs-5 me-2 py-2 px-4" type="button">Button</button><button class="btn btn-light fs-5 py-2 px-4" type="button">Button</button>
-                </div>
-            </div>
-        </section>
-        <section class="py-4 py-xl-5">
-            <div class="container-fluid p-0">
-                <div class="row g-0 mb-5">
-                    <div class="col-md-8 col-xl-6 text-center mx-auto">
-                        <h2>Heading</h2>
-                        <p>Curae hendrerit donec commodo hendrerit egestas tempus, turpis facilisis nostra nunc. Vestibulum dui eget ultrices.</p>
-                    </div>
-                </div>
-                <div class="row g-0 row-cols-1 row-cols-md-2 row-cols-xl-3" data-bss-baguettebox="">
-                    <div class="col"><a href="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"><img class="img-fluid" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"></a></div>
-                    <div class="col"><a href="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"><img class="img-fluid" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"></a></div>
-                    <div class="col"><a href="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"><img class="img-fluid" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"></a></div>
-                    <div class="col"><a href="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"><img class="img-fluid" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"></a></div>
-                    <div class="col"><a href="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"><img class="img-fluid" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"></a></div>
-                    <div class="col"><a href="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"><img class="img-fluid" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"></a></div>
+                    <p class="fw-bold text-primary mb-2">Thank for Supporting!</p>
+                    <h1 class="fw-bold mb-4">Subscribe to every story published,<br>Have a nice moment</h1><a href="https://regiapriandi012.medium.com/subscribe" target="_blank" style="text-decoration: none; color: black;"><button class="btn btn-light fs-5 py-2 px-4" type="button">Subscribe</button></a>
                 </div>
             </div>
         </section>
@@ -132,7 +114,7 @@
             <div class="container">
                 <div class="row row-cols-1 row-cols-lg-3">
                     <div class="col">
-                        <p class="text-muted my-2">Copyright&nbsp;© 2023 Brand</p>
+                        <p class="text-muted my-2">Made with ❤ in Indonesia</p>
                     </div>
                     <div class="col">
                         <ul class="list-inline my-2">
@@ -155,7 +137,6 @@
                     </div>
                     <div class="col">
                         <ul class="list-inline my-2">
-                            <li class="list-inline-item"><a class="link-secondary" href="#">Privacy Policy</a></li>
                             <li class="list-inline-item"><a class="link-secondary" href="#">Terms of Use</a></li>
                         </ul>
                     </div>
