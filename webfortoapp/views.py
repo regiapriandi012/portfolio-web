@@ -5,9 +5,10 @@ from .models import Github, Article
 def index(request):
     github = Github.objects.all()
     article = Article.objects.all()
-
     context = {
         'githubs': github,
-        'aricles': article,
+        'articles': article,
+        'github_topics': " ".join([p.topics for p in github]).split(", "),
+        'article_topics': " ".join([p.topics for p in article]).split(", "),
     }
     return render(request, 'webfortoapp/index.html', context)
