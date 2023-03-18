@@ -28,6 +28,9 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['34.105.106.49', 'pythonproject.regiapriandi.me', 'localhost',]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://pythonproject.regiapriandi.me'
+]
 
 # Application definition
 
